@@ -1,0 +1,32 @@
+@import'./variables.styl';
+
+.clock
+  display flex
+  justify-content center
+  &__block
+    display flex
+    flex-direction column
+    border 1px solid $lil - 70%
+    border-radius 15px
+    margin 7px
+    width 70px
+    padding 15px 0
+    background-color #e7d5fb
+    background: radial-gradient(ellipse at center, alpha($lil, 1) 0%, alpha($lil - 40%, 1) 100%)
+    box-shadow 0 0 4px 4px $Gray + 20%
+    > span
+      color $pink - 40%
+      font-size 3rem
+  &__smalltext
+    color $pink - 50%
+
+@media screen and (max-width: $mobile)
+  .clock
+    &__block
+      margin 5px
+      width 60px
+      padding 10px 0
+      > span
+        font-size 2rem
+    &__smalltext
+      font-size .7rem

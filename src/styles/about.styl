@@ -1,0 +1,58 @@
+@import'./variables.styl';
+
+.about
+  background-image url('./../assets/image/bg_5.jpg')
+  background-repeat no-repeat
+  background-size cover
+  .page-content
+    background-color $lil
+    background linear-gradient(to bottom, alpha($lil + 50%, .9) 0%, alpha($lil + 90%, .5) 100%)
+    box-shadow 0 0 10px 3px $Gray + 20%
+    padding 63px 10px
+    color $white
+    .head
+      text-align center
+      margin-bottom 25px
+      color $pink - 40%
+      font-size 1.3rem
+    .img
+      max-width 100%
+      > img
+        max-width 100%
+    .text
+      margin 25px
+      font-style italic
+      font-size 1.3rem
+      line-height 2
+      letter-spacing 3px
+      color $pink - 50%
+    .content-block
+      > h3
+        margin 10px 25px
+        color $pink - 70%
+        font-size 1.5rem
+      > p
+        margin 7px 0 20px 40px
+        color $pink - 50%
+        font-size 1.2rem
+
+@media screen and (max-width: $mobile)
+  .about
+    .page-content
+      padding 35px 10px
+      .head
+        margin-bottom 15px
+        font-size .8rem
+      .text
+        margin 0
+        font-size 1rem
+        line-height 1.5
+        letter-spacing 3px
+        text-align justify
+      .content-block
+        > h3
+          margin 10px 5px 5px
+          font-size 1.2rem
+        > p
+          margin 5px 0 5px 20px
+          font-size 1rem

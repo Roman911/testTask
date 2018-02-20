@@ -1,0 +1,51 @@
+@import'./variables.styl';
+
+.slider2
+  margin 50px auto
+  width 80%
+  height 100%
+  position relative
+  box-shadow 0 0 10px 7px $Gray + 20%
+  &__slides
+    position relative
+    margin 0 auto
+    width auto
+    height 0
+    padding-bottom 66%
+    &_slide
+      position absolute
+      left 0
+      top 0
+      width 100%
+      height 100%
+      opacity 0
+      z-index 1
+      transition opacity 1s
+      background-size cover
+      &:nth-of-type(1)
+        background-image url('./../assets/image/img_03.jpg')
+      &:nth-of-type(2)
+        background-image url('./../assets/image/img_04.jpg')
+      &:nth-of-type(3)
+        background-image url('./../assets/image/img_05.jpg')
+      &:nth-of-type(4)
+        background-image url('./../assets/image/img_06.jpg')
+      &:nth-of-type(5)
+        background-image url('./../assets/image/img_07.jpg')
+
+.showing
+  opacity 1
+  z-index 2
+
+.buttons2
+  position absolute
+  width 100%
+  display flex
+  justify-content space-between
+  top 50%
+  z-index 3
+
+@media screen and (max-width: $mobile)
+  .slider2
+    width 95%
+    margin 35px auto

@@ -1,0 +1,31 @@
+@import'./variables.styl';
+
+.restaurant
+  position relative
+  background-image url('./../assets/image/bg_4.jpg')
+  background-repeat no-repeat
+  background-position center, center
+  background-size cover
+  text-align center
+  .page-content
+    background-color $lil
+    background linear-gradient(to bottom, alpha($lil + 50%, .9) 0%, alpha($lil + 90%, .5) 100%)
+    box-shadow 0 0 10px 3px $Gray + 20%
+    padding 63px 10px
+    .head
+      text-align center
+      margin-bottom 25px
+      color $pink - 40%
+      font-size 1.3rem
+    .img
+      > img
+        max-width 100%
+    .content-block
+      > h3
+        margin 10px 0 30px
+        color $pink - 70%
+        font-size 1.5rem
+      > p
+        margin 20px 0 20px
+        color $pink - 50%
+        font-size 1.2rem
