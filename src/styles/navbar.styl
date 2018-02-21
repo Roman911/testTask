@@ -1,20 +1,22 @@
 @import'./variables.styl';
 
 .bar
-  border 1px solid red
-  position fixed
-  top 0
-  left 0
+  box-sizing border-box
   width 100%
   background-color $white
-  .nav-bar__control
-    display none
   .nav-bar
+    box-sizing border-box
     display flex
     justify-content space-between
     padding 20px 40px
     text-transform uppercase
+    &__control
+      > i
+        display none
+        font-size 2rem
+        cursor pointer
     &__logo
+      margin-right 25px
       > a
         > h1
           font-family Fregat_bold
@@ -30,4 +32,36 @@
           > a
             > p
               color $Gray
-              font-size 0.9rem
+              font-size 0.8rem
+              text-align center
+              &:hover
+                color $green
+
+@media screen and (max-width: $tablets)
+  .bar
+    position relative
+    .nav-bar
+      position absolute
+      top 0
+      left 0
+      width 100%
+      background-color $white
+      &__control
+        > i
+          display block
+      &__link
+        display none
+      .nav-bar__link.showed
+        display block
+        position absolute
+        top 70px
+        right 0
+        background-color $white
+        padding 20px 10px
+        > ul
+          flex-direction column
+          > li
+            margin 7px 0
+
+    .relative
+      position relative

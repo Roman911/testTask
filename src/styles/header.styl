@@ -1,19 +1,19 @@
 @import'./variables.styl';
 
 .head
-  margin-top 55px
-  height 100vh
+  height 100%
   .header
-    background: linear-gradient(to right, alpha($lightGreen, 1) 0%, alpha($lightGreen, 1) 45%, alpha($lightGreen, 0) 55%, alpha($lightGreen, 0) 100%), url('./../assets/image/img_01.jpg')
+    background linear-gradient(to right, alpha($lightGreen, 1) 0%, alpha($lightGreen, 1) 49%, alpha($lightGreen, 0) 54%, alpha($lightGreen, 0) 100%), url('./../assets/image/img_01.jpg')
     background-position center, right
     background-repeat no-repeat
+    background-size 100%, 65%
     .block-ifo
       padding 110px 55px 80px
       &__head
         > h2
           line-height 1.3
           text-align justify
-          font-size 1.7rem
+          font-size 1.6rem
           color $green
       &__text
         margin 40px 0
@@ -24,11 +24,50 @@
           color $Gray
       .buttons
         margin-top 85px
+        .btn_green
+          margin-right 35px
   .about
     background-color $green
     .content-block
       padding 45px 55px
+      display flex
+      align-items center
       > h2
         color $white
+        font-size 1.3rem
     .block-item
       padding 45px 0
+      &__text
+        line-height 1.5
+        font-family PT_Sans_regular
+        color $white
+
+@media screen and (max-width: $laptops)
+  .head
+    .header
+      background-position center, right
+      background-size 100%, auto
+      .block-ifo
+        padding 80px 55px 60px
+        &__text
+          margin 30px 0
+        .buttons
+          display flex
+          flex-direction column
+          max-width 250px
+          margin-top 65px
+          .btn_green
+            margin-right 0
+            margin-bottom 20px
+@media screen and (max-width: $tablets)
+  .head
+    .header
+      background $lightGreen
+      .block-ifo
+        .buttons
+          max-width 100%
+    .about
+      .content-block
+        padding 35px 45px 20px
+      .block-item
+        padding 15px 45px 35px

@@ -1,97 +1,21 @@
 @import'./variables.styl';
 
-.blocking
-  display none
-
-.blocking.showed
-  display block
-  position fixed
-  top 0
-  left 0
-  width 100vw
-  height 100vh
-  background-color alpha($Gray, .75)
-  z-index 10
-  .modal
+.modal
+  .blocking.showed
     position fixed
-    border 1px solid $Gray + 40%
-    width 60%
-    max-height 100%
-    top 50%
-    left 50%
-    transform translate(-50%, -50%)
-    background-color $white
-    .btnClosed
-      color $white
-      font-size 1.1rem
-    .header
-      display none
-      height 100%
-      &__img
-        margin-bottom 70px
-        padding 20px
-        > h3
-          color $lil - 20%
-        > img
-          max-width 300px
-        > a
-          margin-left 15px
-          padding 5px
-          display flex
-          flex-direction column
-          max-width 100%
-          color $pink - 40%
-          font-size 1.2rem
-          &:hover
-            color $lil - 40%
-            background-color alpha($Gray + 70%, .5)
-      &__text
-        padding 20px 40px
-        > h3
-          color $lil - 20%
-        > p
-          margin 15px 0 70px
-          font-style italic
-          color $pink - 20%
-    .header.modal_1.showed2,
-    .header.modal_2.showed2,
-    .header.modal_3.showed2,
-    .header.modal_4.showed2,
-    .header.modal_5.showed2,
-    .header.modal_6.showed2,
-    .header.modal_7.showed2,
-    .header.modal_8.showed2,
-    .header.modal_9.showed2,
-    .header.modal_10.showed2
-      display flex
-      flex-direction row
-      height 100%
-
-  .relative
-    position relative
-    .btnClosed
-      position absolute
+    top 0
+    left 0
+    width 100vw
+    height 100vh
+    background-color alpha($Gray, .75)
+    .window
+      position fixed
+      border 1px solid $Gray + 40%
+      width 60%
+      max-height 100%
+      top 50%
       left 50%
-      bottom 0
       transform translate(-50%, -50%)
-      padding 10px 50px
+      background-color $white
 
-@media screen and (max-width: $laptops)
-  .blocking.showed
-    .modal
-      width 70%
 
-@media screen and (max-width: $tablets)
-  .blocking.showed
-    .modal
-      width 90%
-@media screen and (max-width: $mobile)
-  .blocking.showed
-    .modal
-      width 80%
-      .header
-        &__img
-          > img
-            max-width 100%
-        &__text
-          display none

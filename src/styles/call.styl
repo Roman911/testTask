@@ -1,0 +1,36 @@
+@import'./variables.styl';
+
+.call
+  padding 63px 0
+  background-color $lightGreen
+  .item
+    &__header
+      color $Gray
+      > h2
+        margin-bottom 15px
+        font-family Fregat_bold
+        text-align center
+    .cities
+      display flex
+      justify-content space-between
+      margin 25px 0
+      .city
+        &:nth-child(1)
+          flex-grow 1
+        &:nth-child(2)
+          flex-grow 3
+        &:nth-child(3)
+          flex-grow 1
+        &__name
+          > h4
+            text-align center
+        &__street
+          > p
+            text-align center
+        &__number
+          > p
+            text-align center
+    .button
+      display flex
+      justify-content center
+      margin-top 50px
